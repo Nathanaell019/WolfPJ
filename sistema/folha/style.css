@@ -19,11 +19,23 @@ body {
     --preto: #000;
     --branco: #FFFF;
     --cor-de-fundo: #303030;
+    --verde-preco: #069e2c;
 }
+
+
 
 .fundo-azul {
     background-color: var(--azul-escuro);
     width: 100vw;
+} 
+
+.bi-person-circle {
+    position: absolute;
+    margin-left: 92%;
+    color: white;
+    font-size: 45px;
+    margin-top: -55px;
+    z-index: 1000;
 }
 
 .fundo-azul h1 {
@@ -63,8 +75,6 @@ body {
     height: 38px;
 }
 
-
-
 .botao:hover {
     background-color: #005bb5;
 }
@@ -79,10 +89,10 @@ body {
     padding: 0.5rem 1rem;
 }
 .navbar-brand img {
-    position: fixed;
-    height: 200px;
+    position: absolute;
+    height: 170px;
     padding-left: 20px;
-    top: 30px;
+    top: -110px;
     z-index: 1000;
     margin-bottom: 15px;
 }
@@ -109,4 +119,187 @@ body {
 .carousel-control-next-icon {
     background-color: var(--ciano);
     border-radius: 10px;
+}
+
+.carousel-inner img {
+    height: 280px;
+}
+
+/* FLEXBOX */
+
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.flexbox2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.flexbox2 > div{
+    background-color: #000;
+    color: #fff;
+    margin: 10px 5px;
+    padding: 20px;
+    font-size: 30px;
+} 
+.flexbox-centralizado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #CCC;
+}
+.flexbox-centralizado > div{
+    background-color: #000;
+    width: 150px;
+    height: 150px;
+}
+.titulo-descontos h1{
+    text-align: center;
+    color: white;
+    margin: 20px;
+}
+.item {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.item img {
+    width:100%;
+    height: auto;
+    border-radius: 4px;
+}
+.item h5 {
+    margin: 10px 0 5px;
+}
+.item h2 {
+    margin: 10px 0 5px;
+}
+.item p {
+    font-size: 14px;
+    color:rgb(112, 111, 111);
+}
+
+.item h3 {
+    color: var(--verde-preco);
+}
+
+.item h4::after {
+    content: '';
+    background: var(--azul-claro-2);
+    height: 3px;
+    width: 100px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: block;
+    transform: translateY(8px);
+}
+
+.item h4 {
+    color: rgb(112, 111, 111);
+}
+
+.item h5 {
+    color: rgb(112, 111, 111);
+}
+
+.item h6 {
+    color: rgb(112, 111, 111);
+}
+
+.item p strong{
+    color: red;
+}
+
+/* Contato */
+.subtitulo {
+    text-align: center;
+    font-weight: 800;
+    font-size: 50;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    color: #FFFF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; 
+}
+
+.contato_esquerda {
+    flex-basis: 35%;
+}
+
+.contato_direita {
+    flex-basis: 95%;
+}
+
+.contato_esquerda p {
+    margin-top: 30px;
+}
+
+.contato_esquerda p {
+    font-size: 25px;
+    margin-right: 15px;
+    color: #FFF;
+}
+.contato_esquerda .bi {
+    color: #FFF;
+}
+
+.contato_direita form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #404040;
+    padding: 15px;
+    margin: 10px 0; /* Menor espaço entre os campos */
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+form textarea {
+    height: 300px; /* Aumenta tamanho da caixa de mensagem */
+    resize: vertical;
+}
+
+form .botao2 {
+    border: none;
+    color: #FFF;
+    padding: 10px 30px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.botao.botao2 {
+    display: inline-block;
+    background-color: var(--azul-claro);
 }
