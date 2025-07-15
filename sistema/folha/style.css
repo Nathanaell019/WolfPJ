@@ -54,18 +54,20 @@ body {
 }
 
 .search-wrapper {
-    padding: auto;
     position: relative;
     width: 70%;
+    margin: 0 auto;
 }
 
 .search-icon {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 12px;
     transform: translateY(-50%);
-    color: var(--Azul);
+    color: var(--azul);
     font-size: 18px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .search-input {
