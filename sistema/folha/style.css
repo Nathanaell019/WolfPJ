@@ -187,6 +187,13 @@ body {
     border-radius: 8px;
     text-align: left;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
 .item img {
@@ -347,7 +354,8 @@ form .botao2 {
     border-radius: 8px;
     padding: 30px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* fundo escuro translúcido */
+    background: rgba(0, 0, 0, 0.5);
+    /* fundo escuro translúcido */
     color: #fff;
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
@@ -382,8 +390,8 @@ form .botao2 {
     transition: 0.15s ease;
 }
 
-.input-field input:focus ~ label,
-.input-field input:valid ~ label {
+.input-field input:focus~label,
+.input-field input:valid~label {
     font-size: 0.8rem;
     top: 10px;
     transform: translateY(-120%);
@@ -472,4 +480,86 @@ a {
     margin-right: 10px;
     border-radius: 50%;
     background: var(--azul-claro);
+}
+
+/* SOCIAIS */
+
+#rodape {
+    background-color: var(--azul-escuro);
+    margin-top: 10%;
+    padding: 10px;
+    color: var(--branco);
+    text-align: center;
+}
+
+#rodape .container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.linha-rodape {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px 10px;
+    text-align: left;
+    
+}
+
+.redes-sociais {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -200px;
+}
+
+/* Sobre nós e redes sociais */
+.sobre-nos,
+.redes-sociais {
+    flex: 1;
+    min-width: 280px;
+}
+
+.texto-sobre {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--branco);
+    margin-left: 150px
+}
+
+
+.social {
+    display: flex;
+    justify-content: flex-start;
+    gap: 35px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.social a {
+    text-decoration: none;
+    font-size: 30px;
+    color: var(--azul);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social a:hover {
+    color: var(--ciano);
+    transform: translateY(-5px);
+}
+
+
+.creditos {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: var(--branco);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
 }
